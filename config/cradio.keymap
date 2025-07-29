@@ -148,7 +148,7 @@
             bindings = <
         //╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮   ╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮
         //│          Й          │          Ц          │          У          │          К          │          Е          │   │          Н          │          Г          │          Ш          │          Щ          │          З          │
-              &kp CYRILLIC_SHORT_I &kp CYRILLIC_TSE      &kp CYRILLIC_U         &kp CYRILLIC_KA       &kp CYRILLIC_IE          &kp CYRILLIC_EN       &kp CYRILLIC_GHE      &kp CYRILLIC_SHA     &kp CYRILLIC_SHCHA      &kp CYRILLIC_ZE
+            &kp CYRILLIC_SHORT_I    &kp CYRILLIC_TSE      &kp CYRILLIC_U         &kp CYRILLIC_KA       &kp CYRILLIC_IE          &kp CYRILLIC_EN       &kp CYRILLIC_GHE      &kp CYRILLIC_SHA     &kp CYRILLIC_SHCHA      &kp CYRILLIC_ZE
         //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
         //│          Ф          │          Ы          │          В          │          А          │          П          │   │          Р          │          О          │          Л          │          Д          │        BSPC         │
               &kp CYRILLIC_EF      &kp CYRILLIC_YERU      &kp CYRILLIC_VE       &kp CYRILLIC_A        &kp CYRILLIC_PE           &kp CYRILLIC_ER      &kp CYRILLIC_O         &kp CYRILLIC_EL       &kp CYRILLIC_DE           &kp BSPC
@@ -156,7 +156,7 @@
         //│          Я          │          Ч          │          С          │          М          │          И          │   │          Т          │          Ь          │          ,          │          .          │        ENTER        │
               &kp CYRILLIC_YA      &kp CYRILLIC_CHE       &kp CYRILLIC_ES       &kp CYRILLIC_EM        &kp CYRILLIC_I           &kp CYRILLIC_TE    &kp CYRILLIC_SOFT_SIGN      &kp COMMA              &kp DOT               &kp ENTER
         //╰─────────────────────┴─────────────────────┴─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┴─────────────────────┴─────────────────────╯
-                                                                              &lt RU_LEF TAB           &kp LSHIFT               &kp SPACE            &lt RU_RIG TAB
+                                                                                &lt RU_LEF TAB           &kp LSHIFT               &kp SPACE            &lt RU_RIG TAB
         //                                                                  ╰─────────────────────┴─────────────────────╯   ╰─────────────────────┴─────────────────────╯
             >;
         };
@@ -165,15 +165,15 @@
             bindings = <
         //╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮   ╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮
         //│          1          │          2          │          3          │          4          │          5          │   │          6          │          7          │          8          │          9          │          0          │
-              &kp N1            &kp N2            &kp N3            &kp N4            &kp N5            &kp N6            &kp N7            &kp N8            &kp N9            &kp N0
+                  &kp N1                &kp N2                &kp N3                &kp N4                &kp N5                    &kp N6                &kp N7                &kp N8                &kp N9                 &kp N0
         //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
-        //│                     │      CAPSLOCK      │      PRINTSCR       │       INSERT        │                     │   │      PAGE UP        │        LEFT        │         UP          │        RIGHT        │       DELETE        │
-              &trans            &kp CAPS            &kp PSCRN            &kp INS            &trans            &kp PG_UP            &kp LEFT            &kp UP            &kp RIGHT            &kp DEL
+        //│                     │       CAPSLOCK      │      PRINTSCR       │        INSERT        │                    │   │      PAGE UP        │        LEFT         │         UP          │        RIGHT        │       DELETE        │
+                  &trans                &kp CAPS             &kp PSCRN              &kp INS               &trans                  &kp PG_UP              &kp LEFT               &kp UP               &kp RIGHT              &kp DEL
         //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
-        //│                     │                     │                     │                     │                     │   │      PAGE DOWN      │        HOME        │        DOWN         │         END         │         ESC         │
-              &trans            &trans            &trans            &trans            &trans            &kp PG_DN            &kp HOME            &kp DOWN            &kp END            &kp ESC
+        //│                     │                     │                     │                     │                     │   │      PAGE DOWN      │         HOME        │        DOWN         │         END         │         ESC         │
+                  &trans                &trans                &trans                 &trans               &trans                   &kp PG_DN              &kp HOME             &kp DOWN               &kp END               &kp ESC
         //╰─────────────────────┴─────────────────────┴─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┴─────────────────────┴─────────────────────╯
-                                                                              &trans               &trans               &trans               &trans
+                                                                                     &trans               &trans                     &trans               &trans
         //                                                                  ╰─────────────────────┴─────────────────────╯   ╰─────────────────────┴─────────────────────╯
             >;
         };
@@ -182,7 +182,7 @@
             bindings = <
         //╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮   ╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮
         //│          !          │          @          │          #          │          $          │          %          │   │          ^          │          &          │          *          │          `          │          ~          │
-              &kp EXCL          &kp AT            &kp HASH          &kp DLLR          &kp PRCNT          &kp CARET          &kp AMPS          &kp ASTRK          &kp GRAVE          &kp TILDE
+                 &kp EXCL          &kp AT            &kp HASH          &kp DLLR          &kp PRCNT          &kp CARET          &kp AMPS          &kp ASTRK          &kp GRAVE          &kp TILDE
         //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
         //│          "          │          [          │          {          │          (          │                     │   │          /          │          +          │          -          │          :          │          ;          │
               &kp DQT           &kp LBKT          &kp LBRC          &kp LPAR          &trans            &kp FSLH          &kp PLUS          &kp MINUS          &kp COLON          &kp SEMI
@@ -198,13 +198,13 @@
         ru_tri_layer {
             bindings = <
         //╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮   ╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮
-        //│         F1          │         F2          │         F3          │         F4          │      PROFILE 0      │   │      PROFILE 3      │     TOGGLEOUT      │         WIN         │       VOL UP        │      NEXT SONG      │
+        //│         F1          │         F2          │         F3          │         F4          │      PROFILE 0      │   │      PROFILE 3      │      TOGGLEOUT      │         WIN         │       VOL UP        │      NEXT SONG      │
               &kp F1            &kp F2            &kp F3            &kp F4            &bt BT_SEL 0          &bt BT_SEL 3          &out OUT_TOG          &tog RU_WIN          &kp C_VOL_UP          &kp C_NEXT
         //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
-        //│         F5          │         F6          │         F7          │         F8          │      PROFILE 1      │   │      PROFILE 4      │     INC BRIGHT     │                     │       VOL MUTE      │     PAUSE/MUTE     │
+        //│         F5          │         F6          │         F7          │         F8          │      PROFILE 1      │   │      PROFILE 4      │      INC BRIGHT     │                     │       VOL MUTE      │     PAUSE/MUTE     │
               &kp F5            &kp F6            &kp F7            &kp F8            &bt BT_SEL 1          &bt BT_SEL 4          &kp C_BRI_UP          &trans              &kp C_MUTE            &kp C_PP
         //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
-        //│         F9          │         F10         │         F11         │         F12         │      PROFILE 2      │   │      CLEAR BT       │     DEC BRIGHT     │                     │      VOL DOWN       │      PREV SONG      │
+        //│         F9          │         F10         │         F11         │         F12         │      PROFILE 2      │   │      CLEAR BT       │      DEC BRIGHT     │                     │      VOL DOWN       │      PREV SONG      │
               &kp F9            &kp F10           &kp F11           &kp F12           &bt BT_SEL 2          &bt BT_CLR           &kp C_BRI_DEC          &trans              &kp C_VOL_DN          &kp C_PREV
         //╰─────────────────────┴─────────────────────┴─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┴─────────────────────┴─────────────────────╯
                                                                               &trans               &trans               &trans               &trans
