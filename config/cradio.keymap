@@ -34,26 +34,100 @@
             bindings = <&kp>, <&kp>;
         };
 
-        layout_switch: layout_switch {
+        // Макросы для русских букв через Alt+Unicode
+        ru_shorti: ru_shorti { compatible = "zmk,behavior-macro"; label = "RU_SHORTI"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N0 &kp KP_N9>, <&macro_release &kp LALT>; }; // Й
+        ru_tse: ru_tse { compatible = "zmk,behavior-macro"; label = "RU_TSE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N6>, <&macro_release &kp LALT>; }; // Ц
+        ru_u: ru_u { compatible = "zmk,behavior-macro"; label = "RU_U"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N3>, <&macro_release &kp LALT>; }; // У
+        ru_ka: ru_ka { compatible = "zmk,behavior-macro"; label = "RU_KA"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N0>, <&macro_release &kp LALT>; }; // К
+        ru_ie: ru_ie { compatible = "zmk,behavior-macro"; label = "RU_IE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N5>, <&macro_release &kp LALT>; }; // Е
+        ru_en: ru_en { compatible = "zmk,behavior-macro"; label = "RU_EN"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N1>, <&macro_release &kp LALT>; }; // Н
+        ru_ghe: ru_ghe { compatible = "zmk,behavior-macro"; label = "RU_GHE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N7>, <&macro_release &kp LALT>; }; // Г
+        ru_sha: ru_sha { compatible = "zmk,behavior-macro"; label = "RU_SHA"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LALT>; }; // Ш
+        ru_shcha: ru_shcha { compatible = "zmk,behavior-macro"; label = "RU_SHCHA"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N9>, <&macro_release &kp LALT>; }; // Щ
+        ru_ze: ru_ze { compatible = "zmk,behavior-macro"; label = "RU_ZE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N7>, <&macro_release &kp LALT>; }; // З
+        ru_ha: ru_ha { compatible = "zmk,behavior-macro"; label = "RU_HA"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N5>, <&macro_release &kp LALT>; }; // Х
+        ru_hardsign: ru_hardsign { compatible = "zmk,behavior-macro"; label = "RU_HARDSIGN"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N2>, <&macro_release &kp LALT>; }; // Ъ
+        ru_ef: ru_ef { compatible = "zmk,behavior-macro"; label = "RU_EF"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N4>, <&macro_release &kp LALT>; }; // Ф
+        ru_yery: ru_yery { compatible = "zmk,behavior-macro"; label = "RU_YERY"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N7>, <&macro_release &kp LALT>; }; // Ы
+        ru_ve: ru_ve { compatible = "zmk,behavior-macro"; label = "RU_VE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N2>, <&macro_release &kp LALT>; }; // В
+        ru_a: ru_a { compatible = "zmk,behavior-macro"; label = "RU_A"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N0>, <&macro_release &kp LALT>; }; // А
+        ru_pe: ru_pe { compatible = "zmk,behavior-macro"; label = "RU_PE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N7>, <&macro_release &kp LALT>; }; // П
+        ru_er: ru_er { compatible = "zmk,behavior-macro"; label = "RU_ER"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N0>, <&macro_release &kp LALT>; }; // Р
+        ru_o: ru_o { compatible = "zmk,behavior-macro"; label = "RU_O"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N5>, <&macro_release &kp LALT>; }; // О
+        ru_el: ru_el { compatible = "zmk,behavior-macro"; label = "RU_EL"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N2>, <&macro_release &kp LALT>; }; // Л
+        ru_de: ru_de { compatible = "zmk,behavior-macro"; label = "RU_DE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N4>, <&macro_release &kp LALT>; }; // Д
+        ru_zhe: ru_zhe { compatible = "zmk,behavior-macro"; label = "RU_ZHE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N6>, <&macro_release &kp LALT>; }; // Ж
+        ru_e: ru_e { compatible = "zmk,behavior-macro"; label = "RU_E"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N3>, <&macro_release &kp LALT>; }; // Э
+        ru_ya: ru_ya { compatible = "zmk,behavior-macro"; label = "RU_YA"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N7>, <&macro_release &kp LALT>; }; // Я
+        ru_che: ru_che { compatible = "zmk,behavior-macro"; label = "RU_CHE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N5>, <&macro_release &kp LALT>; }; // Ч
+        ru_es: ru_es { compatible = "zmk,behavior-macro"; label = "RU_ES"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N1>, <&macro_release &kp LALT>; }; // С
+        ru_em: ru_em { compatible = "zmk,behavior-macro"; label = "RU_EM"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N0>, <&macro_release &kp LALT>; }; // М
+        ru_i: ru_i { compatible = "zmk,behavior-macro"; label = "RU_I"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N8>, <&macro_release &kp LALT>; }; // И
+        ru_te: ru_te { compatible = "zmk,behavior-macro"; label = "RU_TE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N2>, <&macro_release &kp LALT>; }; // Т
+        ru_softsign: ru_softsign { compatible = "zmk,behavior-macro"; label = "RU_SOFTSIGN"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N6>, <&macro_release &kp LALT>; }; // Ь
+        ru_be: ru_be { compatible = "zmk,behavior-macro"; label = "RU_BE"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N1 &kp KP_N1>, <&macro_release &kp LALT>; }; // Б
+        ru_yu: ru_yu { compatible = "zmk,behavior-macro"; label = "RU_YU"; #binding-cells = <0>; 
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N2 &kp KP_N0>, <&macro_release &kp LALT>; }; // Ю
+
+        // Макрос для переключения раскладки Win11 (LShift+LCtrl)
+        win_ru_switch: win_ru_switch {
             compatible = "zmk,behavior-macro";
-            label = "LAYOUT_SWITCH";
+            label = "WIN_RU_SWITCH";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&kp LCTRL>;
+        };
+
+        // Макрос для переключения на русскую раскладку
+        to_ru_layout: to_ru_layout {
+            compatible = "zmk,behavior-macro";
+            label = "TO_RU_LAYOUT";
             #binding-cells = <0>;
             bindings = <
-                &macro_press &kp LSHFT &kp LCTRL
-                &macro_pause_for 50
-                &macro_release &kp LSHFT &kp LCTRL
+                &macro_tap &win_ru_switch
+                &macro_wait_time 50
                 &macro_tap &to RU_WIN
             >;
         };
 
-        layout_reset: layout_reset {
+        // Макрос для переключения на английскую раскладку
+        to_en_layout: to_en_layout {
             compatible = "zmk,behavior-macro";
-            label = "LAYOUT_RESET";
+            label = "TO_EN_LAYOUT";
             #binding-cells = <0>;
             bindings = <
-                &macro_press &kp LSHFT &kp LCTRL
-                &macro_pause_for 50
-                &macro_release &kp LSHFT &kp LCTRL
+                &macro_tap &win_ru_switch
+                &macro_wait_time 50
                 &macro_tap &to EN_WIN
             >;
         };
@@ -88,7 +162,7 @@
         //│          Z          │          X          │          C          │          V          │          B          │   │          N          │          M          │         , <         │         . >         │        ENTER        │
                    &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                     &kp N                 &kp M               &kp COMMA              &kp DOT              &kp ENTER
         //╰─────────────────────┴─────────────────────┴─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┴─────────────────────┴─────────────────────╯
-                                                                                 &lt EN_LEF TAB          &kp LSHIFT               &kp SPACE            &lt EN_RIG TAB
+                                                                                 &lt EN_LEF TAB          &kp LSHIFT               &kp SPACE            &to_ru_layout
         //                                                                  ╰─────────────────────┴─────────────────────╯   ╰─────────────────────┴─────────────────────╯
             >;
         };
@@ -148,21 +222,21 @@
 
         // ======================================================================================================= Русская раскладка =======================================================================================================
         // ============= RU - Основной слой =============
-       ru_win_layer {bindings = <
-//╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮   ╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮
-//│          Й          │          Ц          │          У          │          К          │          Е          │   │          Н          │          Г          │          Ш          │          Щ          │          З          │
-&kp CYRILLIC_SHORTI &kp CYRILLIC_TSHE &kp CYRILLIC_U &kp CYRILLIC_KA &kp CYRILLIC_IE &kp CYRILLIC_EN &kp CYRILLIC_GHE &kp CYRILLIC_SHA &kp CYRILLIC_SHCHA &kp CYRILLIC_ZE
-//├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
-//│          Ф          │          Ы          │          В          │          А          │          П          │   │          Р          │          О          │          Л          │          Д          │        BSPC         │
-&kp CYRILLIC_EF &kp CYRILLIC_YERU &kp CYRILLIC_VE &kp CYRILLIC_A &kp CYRILLIC_PE &kp CYRILLIC_ER &kp CYRILLIC_O &kp CYRILLIC_EL &kp CYRILLIC_DE &kp BSPC
-//├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
-//│          Я          │          Ч          │          С          │          М          │          И          │   │          Т          │          Б          │         , <         │         . >         │        ENTER        │
-&kp CYRILLIC_YA &kp CYRILLIC_CHE &kp CYRILLIC_ES &kp CYRILLIC_EM &kp CYRILLIC_I &kp CYRILLIC_TE &kp CYRILLIC_BE &kp COMMA &kp DOT &kp ENTER
-//╰─────────────────────┴─────────────────────┴─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┴─────────────────────┴─────────────────────╯
-                                                                        &lt RU_LEF TAB &kp LSHIFT &kp SPACE &lt RU_RIG TAB
-//                                                                  ╰─────────────────────┴─────────────────────╯   ╰─────────────────────┴─────────────────────╯
->;
-};
+        ru_win_layer {bindings = <
+        //╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮   ╭─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────╮
+        //│          Й          │          Ц          │          У          │          К          │          Е          │   │          Н          │          Г          │          Ш          │          Щ          │          З          │
+              &ru_shorti           &ru_tse               &ru_u                &ru_ka               &ru_ie                   &ru_en               &ru_ghe              &ru_sha             &ru_shcha             &ru_ze
+        //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
+        //│          Ф          │          Ы          │          В          │          А          │          П          │   │          Р          │          О          │          Л          │          Д          │        BSPC         │
+               &ru_ef              &ru_yery              &ru_ve               &ru_a                &ru_pe                   &ru_er               &ru_o                &ru_el              &ru_de                &kp BSPC
+        //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
+        //│          Я          │          Ч          │          С          │          М          │          И          │   │          Т          │          Б          │         , <         │         . >         │        ENTER        │
+               &ru_ya              &ru_che               &ru_es               &ru_em               &ru_i                    &ru_te               &ru_be               &kp COMMA            &kp DOT               &kp ENTER
+        //╰─────────────────────┴─────────────────────┴─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┴─────────────────────┴─────────────────────╯
+                                                                                 &lt RU_LEF TAB          &kp LSHIFT               &kp SPACE            &to_en_layout
+        //                                                                  ╰─────────────────────┴─────────────────────╯   ╰─────────────────────┴─────────────────────╯
+            >;
+        };
 
         // ============= RU - Правый слой =============
         ru_right_layer {bindings = <
@@ -171,10 +245,10 @@
                   &kp N1                &kp N2                &kp N3                &kp N4                &kp N5                    &kp N6                &kp N7                &kp N8                &kp N9                 &kp N0
         //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
         //│          Ь          │       CAPSLOCK      │      PRINTSCR       │        INSERT       │                     │   │      PAGE UP        │        LEFT         │         UP          │        RIGHT        │       DELETE        │
-           &kp CYRILLIC_SOFT_SIGN       &kp CAPS             &kp PSCRN              &kp INS               &trans                  &kp PG_UP              &kp LEFT               &kp UP               &kp RIGHT              &kp DEL
+              &ru_softsign             &kp CAPS             &kp PSCRN              &kp INS               &trans                  &kp PG_UP              &kp LEFT               &kp UP               &kp RIGHT              &kp DEL
         //├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┼─────────────────────┤
         //│          Ъ          │                     │                     │                     │                     │   │      PAGE DOWN      │         HOME        │        DOWN         │         END         │         ESC         │
-           &kp CYRILLIC_HARD_SIGN        &trans                &trans                 &trans               &trans                  &kp PG_DN              &kp HOME             &kp DOWN               &kp END               &kp ESC
+              &ru_hardsign              &trans                &trans                 &trans               &trans                  &kp PG_DN              &kp HOME             &kp DOWN               &kp END               &kp ESC
         //╰─────────────────────┴─────────────────────┴─────────────────────┼─────────────────────┼─────────────────────┤   ├─────────────────────┼─────────────────────┼─────────────────────┴─────────────────────┴─────────────────────╯
                                                                                      &trans               &trans                     &trans               &trans
         //                                                                  ╰─────────────────────┴─────────────────────╯   ╰─────────────────────┴─────────────────────╯
